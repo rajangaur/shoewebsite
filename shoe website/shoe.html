@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/@3dweb/360javascriptviewer/lib/JavascriptViewer.min.js"></script>
+
+
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+}
+    #jsv-holder {
+        width:500px;
+     }
+    #jsv-holder img {
+        width: 100%;
+     }
+    #shoe{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 5px;
+        margin: 5px;
+    }
+    .text-center {
+        text-align: center!important;
+    }
+    .h1, .h2, .h3, .h4, .h5, h1, h2, h3, h4, h5, p, body {
+        font-size: 25px;
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    }
+    .c-footer .footer-bikes-menu, .c-footer .footer-copyright {
+    padding-bottom: 0.75rem!important;
+    padding-top: 0.75rem!important;
+}
+.col-md-12 {
+    background-color: black;
+    min-height: 70px;
+}
+p.text-center {
+    color: aliceblue;
+    padding-top: 10px;
+}
+.section-title {
+    margin-top: 0;
+    background-color: black;
+    color: aliceblue;
+    min-height: 100px;
+}
+.h1{
+    margin-top: 0px;
+}
+</style>
+<div class="site-section"><div class="container text-center"><div class="site-blocks-cover"><div class="section-title"><h1 style="
+    margin: 0; padding-top: 15px;">Configure your 360 product presentation</h1></div> <p>
+    Customize your 360 product presentation online with us!<br>
+    Play with settings like speed inertia and lot more.<br>
+    Let's create something new.
+  </p></div></div></div>
+<div id="shoe">
+    <div id="jsv-holder">
+            <img id="jsv-image" alt="your 360 images" src="https://cdn1.360-javascriptviewer.com/images/blue-shoe-small/20180906-001-blauw.jpg">
+    </div>
+</div>
+<div class="row d-flex footer-copyright pl-md-5 pr-md-5 pt-2 pb-2">
+    <div class="col-md-12">
+        <p class="text-center" style="
+        margin-bottom: 0;
+    ">Copyright © 2022 Rajan Gaur <br class="d-sm-none">
+All rights reserved</p>
+        
+    </div>
+</div>
+<script type="application/javascript">
+      window.addEventListener('load', () => {
+    const jsv = new JavascriptViewer({ 
+      mainHolderId: 'jsv-holder',
+      mainImageId: 'jsv-image',
+      imageUrlFormat: '20180906-0xx-blauw.jpg',
+      totalFrames:  72,
+      defaultProgressBar:  true,
+      speed: 90,
+      inertia: 12,
+      reverse:true,
+       zoom:true,
+      autoRotate:1,
+      notificationConfig:{
+                       dragToRotate:{
+                         showStartToRotateDefaultNotification:true,
+                         mainColor:"rgba(0,0,0,0.20)",
+                         textColor:"rgba(243,237,237,0.80)",
+                           }
+                       }});
+
+      jsv.start()
+      .then(() => console.log('viewer started'))
+      .catch((e) => console.log('failed loading 360 viewer: ' + e))
+});
+</script>
+</body>
+</html>
